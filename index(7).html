@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitesquare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            color: #00bcd4;
+        }
+
+        .search-box input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .go-button button {
+            padding: 8px 15px;
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hero {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            background-color: #fff;
+            margin: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab {
+            padding: 20px;
+            border-right: 1px solid #eee;
+            color: #666;
+        }
+
+        .tab:last-child {
+            border-right: none;
+        }
+
+        .tab.active {
+            color: #00bcd4;
+            background-color: #f9f9f9;
+        }
+
+        .content-grid {
+            margin: 20px;
+        }
+
+        .content-row-top {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .content-row-middle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .content-row-bottom {
+            margin-top: 20px;
+        }
+
+        .content-row-bottom .content-item {
+            width: 100%;
+        }
+
+        .content-item {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-item h2 {
+            color: #00bcd4;
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .content-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content-item a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .team-member {
+            margin-bottom: 15px;
+        }
+
+        .team-member img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .client-logos img {
+            height: 40px;
+            opacity: 0.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+.footer-section h3 {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-logo {
+            text-align: right;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Whitesquare Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PARTNERS</a></li>
+                <li><a href="#">CUSTOMERS</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="go-button">
+            <button>GO</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>FUSCE VITAE NIBH QUIS DIAM FERMENTUM</h1>
+            <p>Etiam adipiscing ultricies commodo</p>
+        </section>
+
+        <section class="tabs">
+            <div class="tab active">1<br>LOREM IPSUM DOLOR</div>
+            <div class="tab">2<br>ULTRICES PELLENTESQUE</div>
+            <div class="tab">3<br>ALIQUAM IPSUM</div>
+            <div class="tab">4<br>NULLAM SED MAURIS</div>
+        </section>
+
+        <section class="content-grid">
+            <div class="content-row-top">
+                <div class="content-item">
+                    <h2>ABOUT WHITESQUARE</h2>
+                    <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et nunc. In egest mi dui, sit amet scelerisque.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="content-item">
+                    <h2>A WORD FROM OUR CEO</h2>
+                    <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et nunc.</p>
+                    <p class="signature">Yane Naumovski, CEO</p>
+                </div>
+            </div>
+
+            <div class="content-row-middle">
+                <div class="content-item">
+                    <h2>SERVICES</h2>
+                    <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et nunc.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="content-item">
+                    <h2>OUR TEAMS</h2>
+                    <div class="team-member">
+                        <img src="team1.jpg" alt="Team Member">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <h2>24/7/365 SUPPORT</h2>
+                    <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et nunc.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+<div class="content-row-bottom">
+                <div class="content-item">
+                    <h2>OUR CLIENTS</h2>
+                    <div class="client-logos">
+                        <img src="client1.png" alt="Client Logo">
+                        <img src="client2.png" alt="Client Logo">
+                        <img src="client3.png" alt="Client Logo">
+                        <img src="client4.png" alt="Client Logo">
+                        <img src="client5.png" alt="Client Logo">
+                        <img src="client6.png" alt="Client Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h3>TWITTER FEED</h3>
+            <p>23 oct</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="footer-section">
+            <h3>SITEMAP</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>SOCIAL NETWORKS</h3>
+            <div class="social-icons">
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="googleplus.png" alt="Google+"></a>
+                <a href="#"><img src="vimeo.png" alt="Vimeo"></a>
+                <a href="#"><img src="flickr.png" alt="Flickr"></a>
+                <a href="#"><img src="rss.png" alt="RSS"></a>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="logo.png" alt="Whitesquare Logo">
+            <p>Copyright © 2012 Whitesquare. A pcklab creation</p>
+        </div>
+    </footer>
+</body>
+</html>
+`
